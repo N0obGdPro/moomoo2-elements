@@ -1,19 +1,40 @@
 const WEAPONS = {
-	toolhammer: {
+	/*toolhammer: {
+		src: "hammer_1",
+		length: 130,
+		width: 130,
+		xOff: -3,
+		yOff: 18
+	},*/
+	toolhammerV2: {
 		src: "hammer_1",
 		length: 140,
 		width: 140,
 		xOff: -3,
 		yOff: 18
 	},
-	handaxe: {
+	/*handaxe: {
+		src: "axe_1",
+		length: 130,
+		width: 130,
+		xOff: 12,
+		yOff: 22
+	},*/
+	handaxeV2: {
 		src: "axe_1",
 		length: 140,
 		width: 140,
 		xOff: 3,
 		yOff: 24
 	},
-	greataxe: {
+	/*greataxe: {
+		src: "great_axe_1",
+		length: 130,
+		width: 130,
+		xOff: -8,
+		yOff: 25
+	},*/
+	greataxeV2: {
 		src: "great_axe_1",
 		length: 140,
 		width: 140,
@@ -29,6 +50,22 @@ const WEAPONS = {
 		yOff: 46
 	},
 	katana: {
+		src: "samurai_1_V1",
+		iPad: 1.3,
+		length: 130,
+		width: 210,
+		xOff: -8,
+		yOff: 59
+	},
+	katanaV2: {
+		src: "samurai_1_V2",
+		iPad: 1.3,
+		length: 130,
+		width: 200,
+		xOff: -8,
+		yOff: 54
+	},
+	katanaV3: {
 		src: "samurai_1",
 		iPad: 1.3,
 		length: 130,
@@ -250,190 +287,392 @@ const ITEMS = {
 	}
 }
 const HATS = {
-	1: {
+	'1_V1': {
+		name: "Fiddler Hat",
+		scale: 120
+	},
+	'1_V2': {
+		name: "Fiddler Hat",
+		scale: 120
+	},
+	'1': {
 		name: "Marksman Cap",
 		scale: 120
 	},
-	2: {
+	'2_V2': {
 		name: "Straw Hat",
 		scale: 120
 	},
-	4: {
+	'2': {
+		name: "Straw Hat",
+		scale: 120
+	},
+	'3': {
+		name: "???",
+		scale: 120
+	},
+	'4': {
 		name: "Ranger Hat",
 		scale: 120
 	},
-	5: {
+	'4_V2': {
+		name: "Ranger Hat",
+		scale: 120
+	},
+	'5': {
 		name: "Cowboy Hat",
 		scale: 120
 	},
-	6: {
+	'5_V2': {
+		name: "Cowboy Hat",
+		scale: 120
+	},
+	'6': {
 		name: "Soldier Helmet",
 		scale: 120
 	},
-	7: {
+	'6_V2': {
+		name: "Soldier Helmet",
+		scale: 120
+	},
+	'6_V3': {
+		name: "Soldier Helmet",
+		scale: 120
+	},
+	'7': {
 		name: "Bull Helmet",
 		scale: 120
 	},
-	8: {
+	'7_V2': {
+		name: "Bull Helmet",
+		scale: 120
+	},
+	'7_V3': {
+		name: "Bull Helmet",
+		scale: 120
+	},
+	'7_V4': {
+		name: "Bull Helmet",
+		scale: 120
+	},
+	'7_V5': {
+		name: "Bull Helmet",
+		scale: 120
+	},
+	'7_V6': {
+		name: "Bull Helmet",
+		scale: 120
+	},
+	'8': {
 		name: "Bummle Hat",
 		scale: 120
 	},
-	9: {
+	'8_V2': {
+		name: "Bummle Hat",
+		scale: 120
+	},
+	'8_V3': {
+		name: "Bummle Hat",
+		scale: 120
+	},
+	'9': {
 		name: "Miners Helmet",
 		scale: 120
 	},
-	10: {
+	'9_V2': {
+		name: "Miners Helmet",
+		scale: 120
+	},
+	'9_V3': {
+		name: "Miners Helmet",
+		scale: 120
+	},
+	'9_V4': {
+		name: "Miners Helmet",
+		scale: 120
+	},
+	'10': {
 		name: "Bush Gear",
 		scale: 160
 	},
-	11: {
+	'10_V2': {
+		name: "Bush Gear",
+		scale: 160
+	},
+	'11': {
+		name: "Spike Gear",
+		scale: 120,
+	},
+	'11_V2': {
+		name: "Spike Gear",
+		scale: 120,
+	},
+	'11_V3': {
 		name: "Spike Gear",
 		scale: 120,
 		topSprite: true
 	},
-	12: {
+	'12': {
 		name: "Booster Hat",
 		scale: 120
 	},
-	13: {
+	'12_V2': {
+		name: "Booster Hat",
+		scale: 120
+	},
+	'12_V3': {
+		name: "Booster Hat",
+		scale: 120
+	},
+	'13': {
+		name: "Honeyswisp Hat",
+		scale: 120
+	},
+	'13_V2': {
+		name: "Honeyswisp Hat",
+		scale: 120
+	},
+	'13_V3': {
+		name: "Medic Gear",
+		scale: 120
+	},
+	'13_V4': {
+		name: "Medic Gear",
+		scale: 120
+	},
+	'13_V5': {
 		name: "Medic Gear",
 		scale: 110
 	},
-	14: {
+	'14': {
 		name: "Windmill Hat",
 		scale: 120,
 		topSprite: true
 	},
-	15: {
+	'14_V2': {
+		name: "Windmill Hat",
+		scale: 120,
+		topSprite: true
+	},
+	'15': {
 		name: "Winter Cap",
 		scale: 120
 	},
-	18: {
+	'15_V2': {
+		name: "Winter Cap",
+		scale: 120
+	},
+	'15_V3': {
+		name: "Winter Cap",
+		scale: 120
+	},
+	'16': {
+		name: "#2 Removed Hat",
+		scale: 120
+	},
+	'16_V2': {
+		name: "#2 Removed Hat",
+		scale: 120
+	},
+	'16_V3': {
+		name: "#2 Removed Hat",
+		scale: 120
+	},
+	'18': {
 		name: "Explorer Hat",
 		scale: 120
 	},
-	20: {
+	'18_V2': {
+		name: "Explorer Hat",
+		scale: 120
+	},
+	'18_V3': {
+		name: "Explorer Hat",
+		scale: 120
+	},
+	'20': {
 		name: "Samurai Armor",
 		scale: 120
 	},
-	21: {
+	'20_V2': {
+		name: "Samurai Armor",
+		scale: 120
+	},
+	'20_V3': {
+		name: "Samurai Armor",
+		scale: 120
+	},
+	'20_V4': {
+		name: "Samurai Armor",
+		scale: 120
+	},
+	'21': {
 		name: "Plague Mask",
 		scale: 120
 	},
-	22: {
+	'21_V2': {
+		name: "Plague Mask",
+		scale: 120
+	},
+	'21_V3': {
+		name: "Plague Mask",
+		scale: 120
+	},
+	'22': {
 		name: "Emp Helmet",
 		scale: 120
 	},
-	23: {
+	'22_V2': {
+		name: "Emp Helmet",
+		scale: 120
+	},
+	'22_V3': {
+		name: "Emp Helmet",
+		scale: 120
+	},
+	'23': {
 		name: "Anti Venom Gear",
 		scale: 120
 	},
-	26: {
+	'23_V2': {
+		name: "Anti Venom Gear",
+		scale: 120
+	},
+	'23_V3': {
+		name: "Anti Venom Gear",
+		scale: 120
+	},
+	'26': {
+		name: "Demolisher Armor",
+		scale: 120
+	},
+	'26_V2': {
 		name: "Barbarian Armor",
 		scale: 120
 	},
-	27: {
+	'26_V3': {
+		name: "Barbarian Armor",
+		scale: 120
+	},
+	'27': {
 		name: "Scavenger Gear",
 		scale: 120
 	},
-	28: {
+	'27_V2': {
+		name: "Scavenger Gear",
+		scale: 120
+	},
+	'27_V3': {
+		name: "Scavenger Gear",
+		scale: 120
+	},
+	'28': {
 		name: "Moo Head",
 		scale: 120
 	},
-	29: {
+	'29': {
 		name: "Pig Head",
 		scale: 120
 	},
-	30: {
+	'30': {
 		name: "Fluff Head",
 		scale: 120
 	},
-	31: {
+	'31': {
 		name: "Flipper Hat",
 		scale: 120
 	},
-	32: {
+	'31_V2': {
+		name: "Flipper Hat",
+		scale: 120
+	},
+	'32': {
 		name: "Musketeer Hat",
 		scale: 120
 	},
-	35: {
+	'35': {
 		name: "Fez Hat",
 		scale: 120
 	},
-	36: {
+	'36': {
 		name: "Pandou Head",
 		scale: 120
 	},
-	37: {
+	'37': {
 		name: "Bear Head",
 		scale: 120
 	},
-	38: {
+	'38': {
 		name: "Monkey Head",
 		scale: 120
 	},
-	40: {
+	'40': {
 		name: "Tank Gear",
 		scale: 120
 	},
-	42: {
+	'42': {
 		name: "Enigma Hat",
 		scale: 120
 	},
-	43: {
+	'43': {
 		name: "Blitz Hat",
 		scale: 120
 	},
-	44: {
+	'44': {
 		name: "Polar Head",
 		scale: 120
 	},
-	45: {
+	'45': {
 		name: "Shame!",
 		scale: 120
 	},
-	46: {
+	'46': {
 		name: "Bull Mask",
 		scale: 120
 	},
-	48: {
+	'48': {
 		name: "Halo",
 		scale: 120
 	},
-	49: {
+	'49': {
 		name: "Bob XIII Hat",
 		scale: 120
 	},
-	50: {
+	'50': {
 		name: "Apple Cap",
 		scale: 120
 	},
-	51: {
+	'51': {
 		name: "Moo Cap",
 		scale: 120
 	},
-	52: {
+	'52': {
 		name: "Thief Gear",
 		scale: 120
 	},
-	53: {
+	'53': {
 		name: "Turret Gear",
 		scale: 120,
 		topSprite: true
 	},
-	55: {
+	'53_V2': {
+		name: "Turret Gear",
+		scale: 120,
+		topSprite: true
+	},
+	'55': {
 		name: "Bloodthirster",
 		scale: 120
 	},
-	56: {
+	'56': {
 		name: "Assassin Gear",
 		scale: 120
 	},
-	57: {
+	'57': {
 		name: "Pumpkin",
 		scale: 120
 	},
-	58: {
+	'58': {
 		name: "Dark Knight",
 		scale: 120
 	}
