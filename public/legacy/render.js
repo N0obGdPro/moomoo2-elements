@@ -13,7 +13,7 @@ function loadImage(fileName, storage) {
 			resolve(storage[fileName])
 		} else {
 			var tmpSprite = new Image()
-			tmpSprite.src = (fileName === "img/weapons/bow_1_d" ? "" : "https://moomoo.io/") + fileName + ".png"
+			tmpSprite.src = (fileName === "img/weapons/bow_1_d" ? "" : "./") + fileName + ".png"
 			tmpSprite.onload = function () {
 				storage[fileName] = tmpSprite
 				resolve(tmpSprite)
