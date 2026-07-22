@@ -10,14 +10,14 @@ async function preload() {
 		const tmpElement = document.createElement("div")
 		tmpElement.className = "selectHat"
 		tmpElement.setAttribute("name", id)
-		tmpElement.style.backgroundImage = `url(https://moomoo.io/img/hats/hat_${id}${HATS[id].topSprite ? "_p" : ""}.png)`
+		tmpElement.style.backgroundImage = `url(./img/hats/hat_${id}${HATS[id].topSprite ? "_p" : ""}.png)`
 		document.getElementById("hatsContainer").appendChild(tmpElement)
 		tmpElement.setAttribute("onclick", "selectHat(this)")
 
 		const tmpElement2 = document.createElement("div")
 		tmpElement2.className = "selectHat"
 		tmpElement2.setAttribute("name", id)
-		tmpElement2.style.backgroundImage = `url(https://moomoo.io/img/hats/hat_${id}${HATS[id].topSprite ? "_p" : ""}.png)`
+		tmpElement2.style.backgroundImage = `url(./img/hats/hat_${id}${HATS[id].topSprite ? "_p" : ""}.png)`
 		document.getElementById("playerHatsContainer").appendChild(tmpElement2)
 		tmpElement2.setAttribute("onclick", "selectHat(this)")
 	}
@@ -26,14 +26,14 @@ async function preload() {
 		const tmpElement = document.createElement("div")
 		tmpElement.className = "selectAccess"
 		tmpElement.setAttribute("name", id)
-		tmpElement.style.backgroundImage = `url(https://moomoo.io/img/accessories/access_${id}.png)`
+		tmpElement.style.backgroundImage = `url(./img/accessories/access_${id}.png)`
 		document.getElementById("accessContainer").appendChild(tmpElement)
 		tmpElement.setAttribute("onclick", "selectAccess(this)")
 
 		const tmpElement2 = document.createElement("div")
 		tmpElement2.className = "selectAccess"
 		tmpElement2.setAttribute("name", id)
-		tmpElement2.style.backgroundImage = `url(https://moomoo.io/img/accessories/access_${id}.png)`
+		tmpElement2.style.backgroundImage = `url(./img/accessories/access_${id}.png)`
 		document.getElementById("playerAccessContainer").appendChild(tmpElement2)
 		tmpElement2.setAttribute("onclick", "selectAccess(this)")
 	}
@@ -42,13 +42,13 @@ async function preload() {
 		const tmpElement = document.createElement("div")
 		tmpElement.className = "selectAnimal"
 		tmpElement.setAttribute("name", name)
-		tmpElement.style.backgroundImage = `url(https://moomoo.io/img/animals/${name}.png)`
+		tmpElement.style.backgroundImage = `url(./img/animals/${name}.png)`
 		document.getElementById("animalsContainer").appendChild(tmpElement)
 		tmpElement.setAttribute("onclick", "selectAnimal(this)")
 	}
 
 	for (const name in PROJECTILES) {
-		var url = `https://moomoo.io/img/weapons/${name}.png`
+		var url = `./img/weapons/${name}.png`
 		if (name === "turret") {
 			const tmpCanvas = document.createElement("canvas")
 			tmpCanvas.width = tmpCanvas.height = 100
@@ -79,16 +79,16 @@ async function preload() {
 		}
 	}
 
-	const variants = ["", "_g", "_d", "_r"]
+	const variants = ["", "_g", "_d", "_r", "_e"]
 	for (const name in WEAPONS) {
-		for (let i = 0; i < 4; i++) {
+		for (let i = 0; i < 5; i++) {
 			const variant = variants[i]
 
 			const tmpElement = document.createElement("div")
 			tmpElement.className = "selectWeapon"
 			tmpElement.setAttribute("name", name)
 			tmpElement.setAttribute("variant", variant)
-			tmpElement.style.backgroundImage = `url(${WEAPONS[name].src === "bow_1" && variant === "_d" ? "" : "https://moomoo.io/"}img/weapons/${
+			tmpElement.style.backgroundImage = `url(${WEAPONS[name].src === "bow_1" && variant === "_d" ? "" : "./"}img/weapons/${
 				WEAPONS[name].src + variant
 			}.png)`
 			document.getElementById("weaponsContainer").appendChild(tmpElement)
@@ -98,7 +98,7 @@ async function preload() {
 			tmpElement2.className = "selectWeapon"
 			tmpElement2.setAttribute("name", name)
 			tmpElement2.setAttribute("variant", variant)
-			tmpElement2.style.backgroundImage = `url(${WEAPONS[name].src === "bow_1" && variant === "_d" ? "" : "https://moomoo.io/"}img/weapons/${
+			tmpElement2.style.backgroundImage = `url(${WEAPONS[name].src === "bow_1" && variant === "_d" ? "" : "./"}img/weapons/${
 				WEAPONS[name].src + variant
 			}.png)`
 			document.getElementById("playerWeaponsContainer").appendChild(tmpElement2)
